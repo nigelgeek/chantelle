@@ -16,6 +16,7 @@ yarn.lock
 # Build & Distribution
 dist/
 build/
+public/
 *.min.js
 *.min.css
 

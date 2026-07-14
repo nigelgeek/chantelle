@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server -p 8000 --gzip",
     "dev": "http-server -p 8000 --gzip --watch",
-    "build": "echo 'No build needed for static site'",
+    "build": "mkdir -p public && cp -r . public --exclude=node_modules --exclude=.git --exclude=public",
     "test": "echo 'Add tests here'"
   },
   "keywords": [
