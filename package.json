@@ -1,0 +1,28 @@
+{
+  "name": "frenching-up-your-life",
+  "version": "1.0.0",
+  "description": "Premium Private French Tutoring Website for Children in Accra",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000 --gzip",
+    "dev": "http-server -p 8000 --gzip --watch",
+    "build": "echo 'No build needed for static site'",
+    "test": "echo 'Add tests here'"
+  },
+  "keywords": [
+    "french tutoring",
+    "private lessons",
+    "education",
+    "children",
+    "accra",
+    "wassce"
+  ],
+  "author": "Chantelle",
+  "license": "All rights reserved",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

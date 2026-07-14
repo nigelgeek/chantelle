@@ -1,0 +1,51 @@
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.env.local
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build & Distribution
+dist/
+build/
+*.min.js
+*.min.css
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Environment
+.env
+.env.development
+.env.production
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# IDE Generated Files
+.eslintcache
+.stylelintcache
+
+# OS-specific
+.vscode/settings.json
+.DS_Store
+
+# Project Specific
+analytics/
+backups/

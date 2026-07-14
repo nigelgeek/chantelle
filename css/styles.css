@@ -1,0 +1,240 @@
+/* ===================================
+   MATERIAL ICONS CONFIGURATION
+   =================================== */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+/* Decorative Elements */
+.french-flag-gradient {
+    background: linear-gradient(to right, #00234e 33.3%, #ffffff 33.3%, #ffffff 66.6%, #bc0003 66.6%);
+    height: 4px;
+    width: 100%;
+}
+
+.hero-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===================================
+   SECTION STYLES
+   =================================== */
+
+.hero-section {
+    position: relative;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+/* ===================================
+   BUTTON STYLES
+   =================================== */
+
+.btn {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    line-height: 1.2;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-primary {
+    background-color: #000e27;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #bc0003;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: #bc0003;
+    color: #ffffff;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba(188, 0, 3, 0.3);
+}
+
+.btn-outline {
+    border: 2px solid #000e27;
+    color: #000e27;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #000e27;
+    color: #ffffff;
+}
+
+/* ===================================
+   NAVIGATION STYLES
+   =================================== */
+
+.nav-link {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #44474f;
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+}
+
+.nav-link:hover {
+    color: #bc0003;
+}
+
+/* ===================================
+   RESPONSIVE UTILITIES
+   =================================== */
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+/* ===================================
+   SMOOTH SCROLLING
+   =================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===================================
+   TEXT UTILITIES
+   =================================== */
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ===================================
+   HOVER & TRANSITION EFFECTS
+   =================================== */
+
+.hover-lift {
+    transition: transform 300ms ease-in-out;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+}
+
+.hover-scale {
+    transition: transform 300ms ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    nav,
+    footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        color: black;
+    }
+}
