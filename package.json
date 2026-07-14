@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server -p 8000 --gzip",
     "dev": "http-server -p 8000 --gzip --watch",
-    "build": "mkdir -p public && cp -r . public --exclude=node_modules --exclude=.git --exclude=public",
+    "build": "echo 'Static site - built by Vercel'",
     "test": "echo 'Add tests here'"
   },
   "keywords": [
