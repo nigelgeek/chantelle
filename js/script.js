@@ -146,33 +146,13 @@ const Forms = (() => {
     };
 
     const setupCtaButtons = () => {
-        const bookBtn = Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.includes('BOOK'));
         const whatsappBtn = Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.includes('WHATSAPP'));
 
         document.querySelectorAll('button').forEach((btn) => {
-            // Add feedback on click
-            btn.addEventListener('click', (e) => {
-                if (btn.classList.contains('book-btn') || btn.textContent.includes('Book')) {
-                    handleBookingClick(e);
-                }
-                if (btn.textContent.includes('WHATSAPP')) {
-                    handleWhatsAppClick(e);
-                }
-            });
+            if (btn.textContent.includes('WHATSAPP')) {
+                btn.addEventListener('click', handleWhatsAppClick);
+            }
         });
-    };
-
-    const handleBookingClick = (e) => {
-        // Add visual feedback
-        const btn = e.target.closest('button');
-        btn.classList.add('scale-95');
-        setTimeout(() => btn.classList.remove('scale-95'), 100);
-
-        // Scroll to contact section
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
     };
 
     const handleWhatsAppClick = (e) => {
