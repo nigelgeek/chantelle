@@ -152,6 +152,34 @@
 }
 
 /* ===================================
+   MOBILE NAVIGATION
+   =================================== */
+
+#mobile-menu-panel {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 73px;
+    left: 0;
+    right: 0;
+    z-index: 45;
+}
+
+#mobile-menu-panel .nav-link {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#mobile-menu-panel .nav-link:last-of-type {
+    border-bottom: none;
+}
+
+#mobile-overlay {
+    z-index: 40;
+}
+
+/* ===================================
    RESPONSIVE UTILITIES
    =================================== */
 

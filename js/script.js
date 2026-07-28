@@ -34,19 +34,56 @@ const Navigation = (() => {
 
     const setupMobileMenu = () => {
         const menuBtn = document.getElementById('mobile-menu-btn');
+        const overlay = document.getElementById('mobile-overlay');
+        const panel = document.getElementById('mobile-menu-panel');
         if (menuBtn) {
             menuBtn.addEventListener('click', toggleMobileMenu);
         }
+        if (overlay) {
+            overlay.addEventListener('click', closeMobileMenu);
+        }
+        // Ensure initial hidden state
+        if (panel) {
+            panel.style.display = 'none';
+        }
+        if (overlay) {
+            overlay.style.display = 'none';
+        }
+        // Close menu when clicking a link inside it
+        document.querySelectorAll('#mobile-menu-panel a').forEach((link) => {
+            link.addEventListener('click', closeMobileMenu);
+        });
     };
 
     const toggleMobileMenu = () => {
-        const nav = document.querySelector('nav');
-        nav.classList.toggle('mobile-menu-open');
+        const panel = document.getElementById('mobile-menu-panel');
+        const overlay = document.getElementById('mobile-overlay');
+        const icon = document.getElementById('mobile-menu-icon');
+        if (panel) {
+            const opening = panel.style.display === 'none' || panel.style.display === '';
+            panel.style.display = opening ? 'block' : 'none';
+            if (overlay) {
+                overlay.style.display = opening ? 'block' : 'none';
+            }
+            if (icon) {
+                icon.textContent = opening ? 'close' : 'menu';
+            }
+        }
     };
 
     const closeMobileMenu = () => {
-        const nav = document.querySelector('nav');
-        nav.classList.remove('mobile-menu-open');
+        const panel = document.getElementById('mobile-menu-panel');
+        const overlay = document.getElementById('mobile-overlay');
+        const icon = document.getElementById('mobile-menu-icon');
+        if (panel) {
+            panel.style.display = 'none';
+            if (overlay) {
+                overlay.style.display = 'none';
+            }
+            if (icon) {
+                icon.textContent = 'menu';
+            }
+        }
     };
 
     return {
@@ -109,8 +146,8 @@ const Forms = (() => {
     };
 
     const setupCtaButtons = () => {
-        const bookBtn = document.querySelector('button[class*="BOOK"]');
-        const whatsappBtn = document.querySelector('button:contains("WHATSAPP")');
+        const bookBtn = Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.includes('BOOK'));
+        const whatsappBtn = Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.includes('WHATSAPP'));
 
         document.querySelectorAll('button').forEach((btn) => {
             // Add feedback on click
