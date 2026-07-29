@@ -15,6 +15,11 @@
     
     <!-- Tailwind Configuration -->
     <script src="js/tailwind-config.js"></script>
+
+    <!--Footer Year-->
+    <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css?v=3" />
@@ -344,7 +349,7 @@
     <footer class="bg-primary text-on-primary w-full" style="padding: 4px 0; line-height: 1;">
         <div class="max-w-7xl mx-auto px-6 md:px-margin-desktop text-center">
             <p class="font-body-md text-surface-variant/80" style="font-size: 11px; margin: 0;">
-                © 2026 Frenching Up Your Life. All rights reserved.
+                © <span id="current-year">2026</span> Frenching Up Your Life. All rights reserved.
             </p>
         </div>
     </footer>
